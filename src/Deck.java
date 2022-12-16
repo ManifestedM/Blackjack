@@ -48,11 +48,11 @@ public class Deck {
 	public int getCardCount(){
 		return deck.size();
 	}
-	public String getRandomCard() {
+	public Card getRandomCard() {
 		int randomNum = (int)(Math.random()*deck.size()+.5);
 		Card card = deck.get(randomNum);
 		deck.remove(randomNum);
-		return card.toString();
+		return card;
 	}
 }
 
