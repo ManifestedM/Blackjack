@@ -6,7 +6,7 @@ public class Deck {
 		while(decks>0) {
 			String type = "Spades";
 			for (int i = 2; i <= 10; i++) {
-				deck.add(new Card(""+i, type));
+				deck.add(new Card(i, type));
 			}
 			deck.add(new Card("A",type));
 			deck.add(new Card("J",type));
@@ -15,7 +15,7 @@ public class Deck {
 			
 			type = "Clubs";
 			for (int i = 2; i <= 10; i++) {
-				deck.add(new Card(""+i,type));
+				deck.add(new Card(i,type));
 			}
 			deck.add(new Card("A",type));
 			deck.add(new Card("J",type));
@@ -24,7 +24,7 @@ public class Deck {
 			
 			type = "Diamonds";
 			for (int i = 2; i <= 10; i++) {
-				deck.add(new Card(""+i,type));
+				deck.add(new Card(i,type));
 			}
 			deck.add(new Card("A",type));
 			deck.add(new Card("J",type));
@@ -33,7 +33,7 @@ public class Deck {
 			
 			type = "Hearts";
 			for (int i = 2; i <= 10; i++) {
-				deck.add (new Card(""+i,type));
+				deck.add (new Card(i,type));
 			}
 			deck.add(new Card("A",type));
 			deck.add(new Card("J",type));
