@@ -34,13 +34,27 @@ public class BlackjackLogic{
 		return ("Player: " + playerSum + " " + playerAceCount + "A " + "Dealer:" + dealerSum);
 	}
 	public double getWinner() {
-		if (playerSum == 21 && playerCardCount ==2)
-			return 1.5;
-		else if (playerSum == dealerSum)
-			return 0;
-		else if (playerSum>dealerSum)
-			return 1;
-		else 
-			return -1;
+		double i;
+		if (playerSum<22) {
+			if (dealerSum<22) {
+				if (playerSum == 21 && playerCardCount == 2)
+					i = 1.5;
+				else if (playerSum == dealerSum)
+					i = 0;
+				else if (playerSum>dealerSum)
+					i = 1;
+				else 
+					i = -1;
+			}
+			else if (playerSum == 21 && playerCardCount == 2)
+				i=1.5;
+			else
+				i = 1;
+		}
+		else i = 0;
+		
+		playerSum = 0;
+		dealerSum = 0;
+		return i;
 	}
 }
