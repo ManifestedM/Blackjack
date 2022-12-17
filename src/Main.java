@@ -37,11 +37,13 @@ public class Main {
 				System.out.print("Dealer Won, Overall gain/loss $" + profit);
 			else
 				System.out.print("Draw, Overall gain/loss $" + profit);
+			logic.getCardCount(deck.getCardsInDeck());
 			System.out.println(" Play Another Round (Y/N)");
 			newGame = kBoard.next().toLowerCase();
-			if (deck.getCardCount()<20)
+			if (deck.getCardsInDeck()<20) {
 				deck.resetShoe(4);
+				logic.resetRunningCount();
+			}
 		}
 	}
-
 }

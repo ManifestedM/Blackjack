@@ -3,6 +3,7 @@ import java.lang.Math;
 public class Deck {
 	ArrayList<Card> deck = new ArrayList();
 	public void resetShoe(int decks) {
+		deck.clear();
 		while(decks>0) {
 			String type = "Spades";
 			for (int i = 2; i <= 10; i++) {
@@ -45,7 +46,7 @@ public class Deck {
 	public ArrayList<Card> getCardList(){
 		return deck;
 	}
-	public int getCardCount(){
+	public int getCardsInDeck(){
 		return deck.size();
 	}
 	public Card getRandomCard() {
